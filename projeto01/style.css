@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: 44px auto;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.text,
+.button,
+.link {
+    font-family: 'Montserrat';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.text {
+    text-align: left;
+}
+
+.headline {
+    font-family: Krona One;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 56px;
+    text-align: left;
+}
+
+.headline__highlight {
+    color: #22D4FD;
+}
+
+.image {
+    max-height: 550px;
+    border-radius: 20px;
+}
+
+.images {
+    position: relative;
+}
+
+.images::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 2px solid #22d4fd;
+    border-radius: 20px;
+    position: absolute;
+    top: -11px;
+    z-index: -1;
+    opacity: 1;
+    visibility: visible;
+    left: 11px;
+}
+
+.links {
+    margin-top: 11px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.link {
+    border-radius: 16px;
+    background-color: #22D4FD;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: center;
+    color: #000;
+    display: block;
+    max-width: 280px;
+    padding: 21.5px;
+    position: relative;
+}
+
+.link:hover {
+    background-color: #22bee1;
+}
+
+.link:after {
+    content: '';
+    position: absolute;
+    bottom: 19px;
+    width: 85%;
+    background-color: #000;
+    height: 4px;
+    left: 13px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.link:hover::after {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1019px) {
+    .container {
+        width: 90%;
+    }
+
+    .headline {
+        font-size: 28px;
+        line-height: 30px;
+    }
+    .image {
+        max-height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .texts {
+        gap: 16px;
+    }
+
+    .texts,
+    .text,
+    .headline {
+        text-align: center;
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .headline {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .links {
+        justify-content: center;
+    }
+
+    .link {
+        font-size: 18px;
+        padding: 10.75px;
+    }
+
+    .image {
+        object-fit: cover;
+        max-height: 300px;
+    }
+}
