@@ -1,11 +1,20 @@
+:root {
+    --color-primary: #000;
+    --color-secondary: #fff;
+    --color-ternaria: #ca22fd;
+    --color-hover: #d240ff;
+    --font-primary: 'Montserrat';
+    --font-auxiliary: 'Krona One';
+}
+
 * {
     padding: 0;
     margin: 0;
 }
 
 body {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
 }
 
 a {
@@ -26,7 +35,7 @@ header {
 }
 
 .menu__link {
-    color: #22D4FD;
+    color: var(--color-ternaria);
 }
 
 .menu__link:hover {
@@ -50,7 +59,7 @@ header {
 .text,
 .button,
 .link {
-    font-family: 'Montserrat';
+    font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 400;
     line-height: 36px;
@@ -67,7 +76,7 @@ header {
 }
 
 .text__variant {
-    color: #000;
+    color: var(--color-primary);
 }
 
 .text__center {
@@ -75,7 +84,7 @@ header {
 }
 
 .headline {
-    font-family: Krona One;
+    font-family: var(--font-auxiliary);
     font-size: 36px;
     font-weight: 400;
     line-height: 56px;
@@ -83,7 +92,7 @@ header {
 }
 
 .headline__highlight {
-    color: #22D4FD;
+    color: var(--color-ternaria);
 }
 
 .image {
@@ -100,7 +109,7 @@ header {
     width: 100%;
     height: 100%;
     display: block;
-    border: 2px solid #22d4fd;
+    border: 2px solid var(--color-ternaria);
     border-radius: 20px;
     position: absolute;
     top: -11px;
@@ -121,12 +130,12 @@ header {
 .link {
     border-radius: 16px;
     background-color: unset;
-    border: 1px solid #22D4FD;
+    border: 1px solid var(--color-ternaria);
     font-size: 24px;
     font-weight: 600;
     line-height: 36px;
     text-align: center;
-    color: #FFF;
+    color: var(--color-secondary);
     width: 60%;
     padding: 10px;
     position: relative;
@@ -137,8 +146,8 @@ header {
 }
 
 .link:hover {
-    background-color: #22bee1;
-    color: #000;
+    background-color: var(--color-hover);
+    color: var(--color-primary);
 }
 
 .link:hover::after {
@@ -146,15 +155,15 @@ header {
 }
 
 .link svg path {
-    fill: #22bee1;
+    fill: var(--color-ternaria);
 }
 
 .link:hover svg path {
-    fill: #000;
+    fill: var(--color-primary);
 }
 
 .footer {
-    background-color: #22D4FD;
+    background-color: var(--color-ternaria);
     text-align: center;
     padding: 23.64px 0;
 }
