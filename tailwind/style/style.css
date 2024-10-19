@@ -1,10 +1,10 @@
 :root {
     --color-primary: #000;
     --color-secondary: #fff;
-    --color-ternaria: #ca22fd;
-    --color-hover: #d240ff;
-    --font-primary: 'Montserrat';
-    --font-auxiliary: 'Krona One';
+    --color-ternaria: #22D4FD;
+    --color-hover: #22bee1;
+    /* --color-ternaria: #ca22fd;
+    --color-hover: #d240ff; */
 }
 
 * {
@@ -36,7 +36,6 @@ header {
 
 .menu__link {
     color: var(--color-ternaria);
-    font-weight: 500;
 }
 
 .menu__link:hover {
@@ -60,10 +59,10 @@ header {
 .text,
 .button,
 .link {
-    font-family: var(--font-primary);
-    font-size: 1.5rem;
+    font-family: 'Montserrat';
+    font-size: 24px;
     font-weight: 400;
-    line-height: 2.25rem;
+    line-height: 36px;
 }
 
 .texts {
@@ -85,10 +84,10 @@ header {
 }
 
 .headline {
-    font-family: var(--font-auxiliary);
-    font-size: 2.25rem;
+    font-family: Krona One;
+    font-size: 36px;
     font-weight: 400;
-    line-height: 3.5rem;
+    line-height: 56px;
     text-align: left;
 }
 
@@ -132,9 +131,9 @@ header {
     border-radius: 16px;
     background-color: unset;
     border: 1px solid var(--color-ternaria);
-    font-size: 1.5rem;
+    font-size: 24px;
     font-weight: 600;
-    line-height: 2.25rem;
+    line-height: 36px;
     text-align: center;
     color: var(--color-secondary);
     width: 60%;
@@ -182,8 +181,8 @@ header {
     }
 
     .headline {
-        font-size: 1.75rem;
-        line-height: 1.875rem;
+        font-size: 28px;
+        line-height: 30px;
     }
     .image {
         max-height: 400px;
@@ -191,13 +190,8 @@ header {
 }
 
 @media (max-width: 768px) {
-    body {
-        background-image: url(/atividade03/assets/Background\ Códigos.png);
-    }
     .menu {
         justify-content: center;
-        margin-top: 138px;
-        margin-bottom: 120px;
     }
     
     .content {
@@ -205,50 +199,37 @@ header {
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
-        gap: 80px;
+        gap: 20px;
     }
 
     .texts {
-        gap: 40px;
+        gap: 16px;
     }
 
     .texts,
-    .text {
-        font-size: 1.5rem;
-        line-height: 2.25rem;
-    }
-
-    .footer .text {
-        font-size: 1.125rem;
-        line-height: 2rem;
+    .text,
+    .headline {
+        text-align: center;
+        font-size: 18px;
+        line-height: 26px;
     }
 
     .headline {
-        font-size: 2rem;
-        line-height: 3.5rem;
+        font-size: 20px;
+        line-height: 28px;
     }
 
     .links {
-        margin-top: 40px;
         justify-content: center;
-        gap: 32px;
     }
 
     .link {
-        font-size: 1.125rem;
-        padding: 8px;
-    }
-
-    .links .text {
-        padding-bottom: 8px;
+        font-size: 18px;
+        padding: 10.75px;
     }
 
     .image {
         object-fit: cover;
-        max-height: 500px;
-    }
-
-    .footer {
-        margin-top: 68px;
+        max-height: 300px;
     }
 }
